@@ -1,0 +1,35 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.peopleFinder {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.header {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-size: 1rem;
+  margin-block-end: 15px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight:bold;
+  font-family: "Segoe UI";
+  color: #2A7386;
+}

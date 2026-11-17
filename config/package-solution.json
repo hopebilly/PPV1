@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "nci-fred-spfx-people-search-client-side-solution",
+    "id": "859b1a9f-84ab-4097-876c-c71cbbf2983e",
+    "version": "1.2.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "nci-fred-spfx-people-search description"
+      },
+      "longDescription": {
+        "default": "nci-fred-spfx-people-search description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "nci-fred-spfx-people-search Feature",
+        "description": "The feature that activates elements of the nci-fred-spfx-people-search solution.",
+        "id": "8081d938-8834-49d2-bc9e-8a473ae38665",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/nci-fred-spfx-people-search.sppkg"
+  }
+}

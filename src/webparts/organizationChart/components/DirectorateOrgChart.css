@@ -1,0 +1,392 @@
+.orgChartComplete {
+  background-color: #fbfbfc;
+}
+
+.chartContainer {
+  overflow: auto;
+  text-align: center;
+  font-size: 11px;
+  min-width: 100%;
+}
+
+#orgChartWrapper {
+  cursor: grab;
+  user-select: none;
+}
+
+#orgChartWrapper:active {
+  cursor: grabbing;
+}
+
+#chart-container,
+#orgChartWrapper,
+#zoom-controls {
+  pointer-events: auto !important;
+}
+
+.chartContainer[style*="scale"] {
+  background: none !important;
+}
+
+.chartContainer > div[class~="orgchart"] {
+  background-image: none !important;
+  background-color: #fbfbfc;
+  padding: 0;
+}
+
+.chartContainer .node {
+  width: 260px !important;
+  max-width: 260px !important;
+  min-height: 120px !important;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+}
+
+.li .hierarchy{
+  background-color: #fbfbfc;
+}
+
+.chartContainer > div[class~="orgchart"] td[class~="leftLine"],
+.chartContainer > div[class~="orgchart"] td[class~="rightLine"],
+.chartContainer > div[class~="orgchart"] td[class~="topLine"],
+.chartContainer > div[class~="orgchart"] td[class~="downLine"],
+.chartContainer > div[class~="orgchart"] tr[class~="verticalNodes"] > td:before,
+.chartContainer > div[class~="orgchart"] [class~="verticalNodes"] ul > li:before,
+.chartContainer > div[class~="orgchart"] [class~="verticalNodes"] ul > li:after {
+  border-color: #84b5b5;
+}
+
+.chartContainer > div[class~="orgchart"] > table:first-child {
+  margin: 0 auto;
+}
+
+.chartContainer > div[class~="orgchart"] tr[class~="lines"] div[class~="downLine"] {
+  background-color: black;
+}
+
+.chartContainer > div[class~="orgchart"] div[class~="node"] {
+  width: auto;
+  height: auto;
+}
+
+/* Ensure white background is enforced on all zoom levels and containers */
+#chart-container,
+.chartContainer,
+.orgchart,
+#chart-inner,
+.orgchart > ul,
+.orgchart ul li,
+.orgchart .node {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Prevent potential SVG pattern from orgchart.js */
+.orgchart svg {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+.nodeTemplate {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #aeb2c5;
+  background-color: #bfd8db;
+  color: #000;
+  overflow: visible;
+  height: 105px;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.nodeTemplate:hover{
+ /*transform: scale(1.02);*/
+ /* background-color: #d2eeef;*/
+  background-color: #4CA6A6;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nodeTemplate1 {
+  /*background-color: #4CA6A6;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate2 {
+  /*background-color:#73C5C5;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate3 {
+  /*background-color: #99E5E5;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate4 {
+  /*background-color: #B8F6F6;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate5 {
+  /*background-color: #D0FBFB;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate6 {
+  /*background-color: #E5FDFD;*/
+  background-color: #d2eeef;
+}
+
+.nodeTemplate7 {
+ /* background-color: #F2FEFE;*/
+  background-color: #d2eeef;
+}
+
+.profilePic {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: #e0f7f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profilePic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  text-align: left;
+  padding-right: 10px;
+}
+
+.personName {
+  font-size: 1.4em;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 40px 0 2px 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.personTitle {
+  font-size: 1.2em;
+  /*color: #444;*/
+  color: #1a1a1a;
+  font-weight: 400;
+  margin: 0 0 2px 60px;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.personTitle:last-child {
+  /*color: #777;*/
+  margin-bottom: 5px;
+}
+
+.tierAcronym {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background-color: #E2E2E2;
+  color: #1c4a55;
+  border: 1px solid #1c4a55;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.orgChartViewButton {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  background-color: #E2E2E2;
+  color: #2a7386;
+  font-weight:bolder;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.highlight-node {
+  background-color:#026b34 !important;
+  color: white !important;
+}
+
+.highlight-node .personTitle{
+  /*background-color:#079246 !important;*/
+  background-color:#026b34 !important;
+  color: white !important;
+}
+
+.highlight-node .personName{
+  /*background-color:#079246 !important;*/
+  background-color:#026b34 !important;
+  color: white !important;
+}
+
+.orgchart .hierarchy::before{
+  border-top: 2px solid black !important;
+  border-radius: 16px !important;
+}
+
+.orgchart>ul>li>ul li>.node:not(.outsider):before {
+  background-color: black !important;
+}
+
+.orgchart .hierarchy:not(.couple)>.node:has(+.nodes):after {
+  background-color: black !important;
+}
+
+.clickableLabel {
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 1px solid #17414c;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #2a7386;
+  display: flex;
+  font-size: 0.7rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #f3f3f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.node {
+  position: relative;
+}
+
+.custom-bottom-toggle {
+  position: absolute;
+  /*bottom: -16px;*/
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 3px 6px;
+  background: #ffffff;
+  border: 1px solid #d0d7dd;
+  border-radius: 12px;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: #2a7386;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-bottom-toggle:hover {
+  background-color: #f1f5f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.custom-bottom-toggle svg {
+  fill: #2a7386 !important;
+  transition: fill 0.2s ease;
+}
+
+.custom-bottom-toggle .child-count {
+  font-size: 0.75rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/*.edge.verticalEdge.bottomEdge {
+  display: none !important;
+}*/
+
+.orgchart .nodes.vertical .node {
+  margin: 12px auto !important;
+}
+
+/* Ensure the parent node is relatively positioned */
+.hierarchy > .node {
+  position: relative;
+}
+
+
+.custom-bottom-toggle {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: #ffffff;
+  border: 1px solid #d0d7dd;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  color: #2a7386;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-bottom-toggle:hover {
+  background-color: #f0f5f8;
+  transform: translateX(-50%) scale(1.03);
+}
+
+.custom-bottom-toggle .material-icons {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.custom-bottom-toggle .child-count {
+  font-weight: 500;
+}
+
+.bottomEdge {
+  font-size: 0 !important;
+}
+
+/* PRINT */
+/* Disable shadows ONLY when exporting */
+.exporting-chart .nodeTemplate {
+  box-shadow: none !important;
+}
+.exporting-chart .orgchart .node {
+  box-shadow: none !important;
+}
+
+.exporting-chart .nodeTemplate,
+.exporting-chart .orgchart .node {
+  box-shadow: none !important;
+  will-change: auto !important;
+  transform: none !important;
+  image-rendering: pixelated !important;
+  backface-visibility: hidden !important;
+}
+
+/*#chart-inner {
+  outline: 2px dashed red;
+}
+
+.chartContainer {
+  outline: 2px dashed blue;
+}*/

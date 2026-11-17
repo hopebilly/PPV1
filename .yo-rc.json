@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "nci-fred-spfx-people-search",
+    "libraryId": "859b1a9f-84ab-4097-876c-c71cbbf2983e",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "nci-fred-spfx-people-search",
+    "solutionShortDescription": "nci-fred-spfx-people-search description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

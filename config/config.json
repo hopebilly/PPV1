@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "peopleorgchart-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/peopleorgchart/PeopleorgchartWebPart.js",
+          "manifest": "./src/webparts/peopleorgchart/PeopleorgchartWebPart.manifest.json"
+        }
+      ]
+    },
+    "people-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/peopleList/PeopleListWebPart.js",
+          "manifest": "./src/webparts/peopleList/PeopleListWebPart.manifest.json"
+        }
+      ]
+    },
+    "employee-search-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeSearch/EmployeeSearchWebPart.js",
+          "manifest": "./src/webparts/employeeSearch/EmployeeSearchWebPart.manifest.json"
+        }
+      ]
+    },
+    "people-finder-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/peopleFinder/PeopleFinderWebPart.js",
+          "manifest": "./src/webparts/peopleFinder/PeopleFinderWebPart.manifest.json"
+        }
+      ]
+    },
+    "organization-chart-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/organizationChart/OrganizationChartWebPart.js",
+          "manifest": "./src/webparts/organizationChart/OrganizationChartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "node_modules/jquery/dist/jquery.min.js",
+      "globalName": "jQuery"
+    },
+    "orgchart": {
+      "path": "node_modules/orgchart/src/js/jquery.orgchart.js",
+      "globalName": "orgchart"
+    }
+  },
+  "localizedResources": {
+    "PeopleorgchartWebPartStrings": "lib/webparts/peopleorgchart/loc/{locale}.js",
+    "PeopleListWebPartStrings": "lib/webparts/peopleList/loc/{locale}.js",
+    "EmployeeSearchWebPartStrings": "lib/webparts/employeeSearch/loc/{locale}.js",
+    "PeopleFinderWebPartStrings": "lib/webparts/peopleFinder/loc/{locale}.js",
+    "OrganizationChartWebPartStrings": "lib/webparts/organizationChart/loc/{locale}.js"
+  }
+}

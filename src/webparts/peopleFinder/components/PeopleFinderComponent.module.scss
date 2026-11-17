@@ -1,0 +1,31 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.peopleFinderComponent {
+  .titleSection{
+    background-color: #f3f9fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    margin-block-end: 15px;
+    margin-inline-end: 0px;
+    font-family: Segoe UI;
+    color: #2A7386;
+  }
+
+  .title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-inline-start: 10px;
+  }
+
+  .titleDescription {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-inline-start: 10px;
+    margin-top: 20px;
+  }
+
+  
+}

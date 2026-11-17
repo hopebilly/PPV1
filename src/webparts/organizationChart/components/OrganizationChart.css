@@ -1,0 +1,271 @@
+.orgChartComplete {
+  background-color: #fbfbfc;
+}
+
+.orgchart {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  width: max-content !important;
+  min-width: 100%;
+  margin: 0 auto !important; 
+  background-image: none !important;
+}
+
+.orgchart > ul {
+  display: flex !important;
+  justify-content: center !important; 
+  align-items: center !important;
+  margin: auto !important;
+  flex-wrap: nowrap !important;
+}
+
+#chart-container,
+#orgChartWrapper,
+#zoom-controls {
+  pointer-events: auto !important;
+}
+
+.chartContainer[style*="scale"] {
+  background: none !important;
+}
+
+.chartContainer > div[class~="orgchart"] {
+  background-image: none !important;
+  background-color: #fbfbfc;
+  padding: 0;
+}
+
+.chartContainer .node {
+  width: 240px !important;
+  max-width: 240px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.chartContainer .orgchart li {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.li .hierarchy{
+  background-color: #fbfbfc;
+}
+
+.chartContainer > div[class~="orgchart"] td[class~="leftLine"],
+.chartContainer > div[class~="orgchart"] td[class~="rightLine"],
+.chartContainer > div[class~="orgchart"] td[class~="topLine"],
+.chartContainer > div[class~="orgchart"] td[class~="downLine"],
+.chartContainer > div[class~="orgchart"] tr[class~="verticalNodes"] > td:before,
+.chartContainer > div[class~="orgchart"] [class~="verticalNodes"] ul > li:before,
+.chartContainer > div[class~="orgchart"] [class~="verticalNodes"] ul > li:after {
+  border-color: #84b5b5;
+}
+
+.chartContainer > div[class~="orgchart"] > table:first-child {
+  margin: 0;
+}
+
+.chartContainer > div[class~="orgchart"] tr[class~="lines"] div[class~="downLine"] {
+  background-color: black;
+}
+
+.chartContainer > div[class~="orgchart"] div[class~="node"] {
+  width: auto;
+  height: auto;
+}
+
+.nodeTemplate {
+  position: relative;  
+  border-radius: 8px;
+  border: 2px solid #aeb2c5;
+  background-color: #bfd8db;
+  color: #000;
+  overflow: visible;
+  min-height: 130px;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.nodeTemplate1 {
+  background-color: #4CA6A6;
+}
+
+.nodeTemplate2 {
+  background-color:#73C5C5;
+}
+
+.nodeTemplate3 {
+  background-color: #99E5E5;
+}
+
+.nodeTemplate4 {
+  background-color:#B8F6F6;
+}
+
+.nodeTemplate5 {
+  background-color: #D0FBFB;
+}
+
+.nodeTemplate6 {
+  background-color: #E5FDFD;
+}
+
+.nodeTemplate7 {
+  background-color: #F2FEFE;
+}
+
+.profilePic {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 1;
+  background-color: #f3f9fa;
+}
+
+.profilePic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  text-align: left;
+}
+
+.personName {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 35px 0 4px 20px; 
+}
+
+.personTitle {
+  font-size: 1.1em;
+  color: #777;
+  margin: 0; 
+  margin: 5px 0 6px 20px; 
+}
+
+.tierAcronym {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  background-color: #E2E2E2;
+  color: #2a7386;
+  font-weight:bolder;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.orgChartViewButton {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  background-color: #E2E2E2;
+  color: #2a7386;
+  font-weight:bolder;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.highlight-node {
+  background-color:#079246 !important;
+  color: white !important;
+}
+
+.highlight-node .personTitle{
+  background-color:#079246 !important;
+  color: white !important;
+}
+
+.personTitle:last-child {
+  color: #777;
+}
+
+.orgchart .hierarchy::before{
+  border-top: 2px solid black !important;
+  border-radius: 16px !important;
+}
+
+.orgchart>ul>li>ul li>.node:not(.outsider):before {
+  background-color: black !important;
+}
+
+.orgchart .hierarchy:not(.couple)>.node:has(+.nodes):after {
+  background-color: black !important;
+}
+
+.clickableLabel {
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 1px solid #17414c;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #2a7386;
+  display: flex;
+  font-size: 0.7rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #f3f3f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/*.node {
+  position: relative;
+}
+
+.custom-bottom-toggle {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-bottom-toggle:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.custom-bottom-toggle svg {
+  fill: #2A7386; /* Consider adapting to your theme's primary color */
+  /*transition: fill 0.2s ease;
+}
+
+.custom-bottom-toggle .child-count {
+  font-size: 0.75rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.edge.verticalEdge.bottomEdge {
+  display: none !important;
+}*/
